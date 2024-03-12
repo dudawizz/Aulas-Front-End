@@ -21,17 +21,17 @@ Em geral, CSS serve para:
 
  ### Formas de implementação
 
- ### Inline
+ #### Inline
 
  O CSS é aplicado diretamente em cada tag HTML.
 
- ### Interna/OnPage
+ #### Interna/OnPage
 
 O CSS é criado usando regras (com seletores, propriedades, valores) dentro da própria página que queremos formatar.
 
 As regras vão valer para todos os elementos/tags desta página.
 
- ### Externa (mais usada!)
+ #### Externa (mais usada!)
 
  É criado um arquivo de extensão CSS dedicado às regras de formatação. Este arquivo é então "conectado" às páginas HTML.
  
