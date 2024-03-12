@@ -45,3 +45,13 @@ h1 {
     border-top-right-radius: 10px;
     text-shadow: rgb(17, 17, 17) 5px 5px 6px;
 }
+
+h2 {
+    font-size: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-left-style: solid;
+    border-left-width: 20px;
+    border-left-color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
