@@ -6,11 +6,42 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
 div {
     background-color: white;
     width: 70%;
     margin: auto;
+    border-radius: 8px;
+
+    /* Espaçamento interno */
+    padding: 16px;
+
+    /* Sombra na caixa bloco
+    box-shadow: cor distânciaX distânciaY suavização */
+    box-shadow:
+        red 5px 5px 10px,
+        yellow -5px -5px 10px;
 }
 
 /* Tornando as imagens flexíveis/responsivas */
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+}
+
+figure {
+    text-align: center;
+}
+
+h1 {
+    font-family: Impact, Verdana, Arial e sans-serif;
+    background-color: rgba(54, 54, 54, 0.397);
+    border-radius: 8px 8px 0px 0px;
+    color: rgb(230, 219, 219);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-shadow: rgb(17, 17, 17) 5px 5px 6px;
+}
