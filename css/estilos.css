@@ -1,11 +1,12 @@
-/* O que fazer? Criar uma regra de formatação */
+/* O que fazer/escrever aqui? REGRAS DE FORMATAÇÃO */
 
-/* Seletor (*) Univesal
-Alterando o comportamento do box model CSS. Usando esta regra evitamos os problemas encontrados ao usar heigth, whith, padding e border ao mesmo tempo*/
-
-* {
-    box-sizing: border-box;
-}
+/* Seletor UNIVERSAL
+Alterando o comportamento
+do Box Model CSS. Usando
+esta regra evitamos os problemas
+encontrados ao se usar width, 
+height, padding e border ao mesmo tempo. */
+* { box-sizing: border-box; }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,20 +15,21 @@ body {
     background-size: cover;
 }
 
-div {
+/* Seletor IDENTIFICADO */
+#container {
     background-color: white;
     width: 70%;
     margin: auto;
     border-radius: 8px;
 
-    /* Espaçamento interno */
+    /* Espaçamento INTERNO */
     padding: 16px;
 
-    /* Sombra na caixa bloco
-    box-shadow: cor distânciaX distânciaY suavização */
+    /* Sombra na caixa/bloco
+    box-shadow: cor distX distY suavização */
     box-shadow:
         red 5px 5px 10px,
-        yellow -5px -5px 10px;
+        purple -5px -5px 10px;
 }
 
 /* Tornando as imagens flexíveis/responsivas */
@@ -39,265 +41,137 @@ figure {
     text-align: center;
 }
 
+/* Exercício
+Crie uma nova regra CSS para estilizar o elemento h1 com as seguintes características:
+
+- Fonte: Impact, Verdana, Arial e sans-serif
+- Cor de fundo: escura com um pouco de transparência
+- Cor do texto: clara
+- Espaçamento: interno APENAS pra cima e pra baixo
+- Letras maiúsculas
+- Texto alinhado no meio
+- Bordas arredondadas APENAS nos cantos superiores
+- Sombra no TEXTO */
+
 h1 {
-    font-family: Impact, Verdana, Arial e sans-serif;
-    background-color: rgba(54, 54, 54, 0.397);
-    border-radius: 8px 8px 0px 0px;
-    color: rgb(230, 219, 219);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 0;
+    font-family: Impact, Verdana, Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-shadow: rgb(17, 17, 17) 5px 5px 6px;
+    
+    /* Versão específica para cada: */
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    
+    /* Versão abreviada: */
+    border-radius: 10px 10px 0 0;
+
+    text-shadow: black 3px 3px 5px;
+
+    letter-spacing: 2px;
+    font-weight: normal;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
+    
+    /* Propriedades com prefixo
+    -webkit-*, -moz-*, -o-*
+    
+    Propriedades relacionadas à 
+    determinados navegadores. Podem
+    ter problemas de compatibilidade.  
+    */
 }
 
 h2 {
     font-size: 20px;
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    padding-left: 15px;
+    border-left-style: solid;
+    border-left-width: 20px;
+    /* margin-left: 30px; */
+    padding-left: 10px;
 }
 
-/* Seletor TAG (vale para todos os <a> */
-a {
-    text-decoration: none;
-}
+/* Seletor TAG (vale para todos os <a>) */
+a { text-decoration: none; }
 
 figure img {
-    transform: scale(0.9);
+    transform: scale(0.8);
     transition: 0.5s;
     filter: grayscale(100%);
 }
 
-/* Pseudo-Classe hover ação de passar o mouse */
+/* Usando a pseudo-classe :hover
+(ação de passar o mouse) */
 figure img:hover {
-    transform: scale(1) rotateX(180deg);
+    transform: scale(1) rotateX(360deg);
     filter: grayscale(0);
 }
 
-/* Seletor Agrupado (grupo de seletor com a mesma formatação */
-p,
-li {
-    font-size: 20px;
-}
 
-/* Seletor Classe */
-.centralizar {
-    text-align: center;
-}
+/* Seletor AGRUPADO (grupo de seletores) */
+p, li { font-size: 18px; }
 
-.sombra {
-    text-shadow: red 1px 1px 5px;
-}
+
+/* Seletor CLASSE */
+.centralizar { text-align: center; }
+
+.sombra { text-shadow: red 1px 1px 5px; }
 
 .destaque {
     background-color: black;
-    color: azure;
+    color: white;
     padding: 3px;
     border-radius: 4px;
 }
 
-.destaque-back {
-    background-color: rgba(209, 165, 52, 0.575);
+
+.destaques-back {
+    background-color: rgba(255, 255, 0, 0.241);
     padding: 8px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-/* Regras para o menu e seus links */
-nav {
-    text-align: center;
-}
-
-/* Regras para o estado inicial dos links */
-
-/* Seletor descendente */
-nav a {
-    color: black;
-    font-weight: bold;
-    background-color: rgba(73, 28, 197, 0.692);
-    display: inline-block;
-    width: 50%;
-    padding: 10px;
-    transition: 1s;
-}
-
-/* Regras de acionamento dos links (Ex. passar o mouse) */
-
-nav a:hover,
-nav a:focus {
-    background-color: rgb(188, 196, 176);
-
-}
-
-nav a:first-child {
-    border-bottom-left-radius: 10px;
-}
-
-nav a:last-child {
-    border-bottom-right-radius: 10px;
-}
-
-/* O que fazer? Vamos criar uma regra de formatação */
-
-/* Seletor (*) Univesal
-Alterando o comportamento do box model CSS. Usando esta regra evitamos os problemas encontrados ao usar heigth, whith, padding e border ao mesmo tempo*/
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../imagens/tarde.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-/* Seletor Identificado (#) só pode ser usado uma vez na tag  */
-
-#container {
-    background-color: white;
-    width: 70%;
-    margin: auto;
     border-radius: 8px;
-    padding: 16px;
-
-    /* Sombra na caixa/bloco
-    box-shadow = cor distorção distorção suavização */
-    box-shadow:
-        red 5px 15px 10px;
-}
-
-/* Tornado as imagens flexiveis/responsivas */
-img {
-    max-width: 100%;
-}
-
-figure {
-    text-align: center;
-}
-
-/* Exercicio
-Crie uma nova regra CSS para estilizar o elemento h1 com as seguintes caracteristicas
- 
-Fonte: Impact, Verdana, Arial e sans-serif
-Cor de fundo: escura com um pouco de transparência
-Cor do texto: clara
-Espaçamento: interno APENAS pra cima e pra baixo
-Letras maiúsculas
-Texto alinhado no meio
-Bordas arredondadas APENAS nos cantos superiores
-Sombra no TEXTO*/
-#container {
-    h1 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        background-color: rgba(0, 0, 240, 0.45);
-        border-radius: 15px 15px 0px 0px;
-        color: rgb(250, 248, 247);
-        text-align: center;
-        text-shadow: black 5px 5px 5px;
-        text-transform: uppercase;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        letter-spacing: 5px;
-        font-weight: lighter;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-        margin: 0px;
-    }
-}
-
-h2 {
-    font-size: 20px;
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    padding-left: 15px;
-}
-
-/* Seletor TAG (vale para todos os <a> */
-a {
-    text-decoration: none;
-}
-
-figure img {
-    transform: scale(0.9);
-    transition: 0.5s;
-    filter: grayscale(100%);
-}
-
-/* Pseudo-Classe hover ação de passar o mouse */
-figure img:hover {
-    transform: scale(1) rotateX(180deg);
-    filter: grayscale(0);
-}
-
-/* Seletor Agrupado (grupo de seletor com a mesma formatação */
-p,
-li {
-    font-size: 20px;
-}
-
-/* Seletor Classe */
-.centralizar {
-    text-align: center;
-}
-
-.sombra {
-    text-shadow: red 1px 1px 5px;
-}
-
-.destaque {
-    background-color: black;
-    color: azure;
-    padding: 3px;
-    border-radius: 4px;
-}
-
-.destaque-back {
-    background-color: rgba(197, 166, 87, 0.575);
-    padding: 8px;
-    border-radius: 4px;
     margin-bottom: 20px;
 }
 
-/* Regras para o menu e seus links */
-nav {
-    text-align: center;
-}
 
-/* Regras para o estado inicial dos links */
+/**** 
+Regras para o menu e seus links 
+****/
 
-/* Seletor descendente */
-nav a {
-    color: black;
+nav { text-align: center; }
+
+/* Regra para o estado inicial dos links */
+nav a { 
+    color: white;
     font-weight: bold;
-    background-color: rgba(73, 28, 197, 0.692);
+    background-color: grey;
     display: inline-block;
     width: 50%;
-    padding: 10px;
+    padding: 2%;
     transition: 1s;
 }
 
-/* Regras de acionamento dos links (Ex. passar o mouse) */
-
-nav a:hover,
-nav a:focus {
-    background-color: rgb(188, 196, 176);
-
+/* Regra para o estado de acionamento dos
+links */
+nav a:hover, nav a:focus {
+    background-color: black;
 }
 
 nav a:first-child {
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 8px;
 }
 
 nav a:last-child {
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 8px;
 }
 
-ul { 
+
+ul {
     margin: 0;
     padding: 0;
     list-style-position: inside;
@@ -310,7 +184,7 @@ ul li {
 
 /* Seletor pseudo-elemento ::marker para alterar o conteúdo do marcador da lista */
 ul li::marker {
-    content: "💥"; 
+    content: "💥";
     /* Apertar windows e ponto final para aparecer emojis  */
     font-size: 23px;
     font-weight: bold;
@@ -318,10 +192,43 @@ ul li::marker {
 }
 
 /* Pseudo-classes */
-ul li:first-child { font-weight: bold; }
-ul li:last-child { font-style: italic; }
-ul li:nth-child(3) { color: purple; }
+ul li:first-child {
+    font-weight: bold;
+}
+
+ul li:last-child {
+    font-style: italic;
+}
+
+ul li:nth-child(3) {
+    color: purple;
+}
 
 /* Cores alternadas */
-ul li:nth-child(even) { background: pink; }
-ul li:nth-child(odd) { background: lightblue; }
+ul li:nth-child(even) {
+    background: pink;
+}
+
+ul li:nth-child(odd) {
+    background: lightblue;
+}
+
+details {
+    border: solid 2px;
+    padding: 8px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary::marker {
+    content: "😑"
+}
+
+/* Seletor de ATRIBUTO
+Somente quando o details estiver com o atributo open (portanto, quando ele é acionado), faremos a troca do marcador */
+details[open] summary::marker {
+    content: "😛";
+}
