@@ -1,4 +1,4 @@
-/* O que fazer/escrever aqui? REGRAS DE FORMATAÇÃO */
+    /* O que fazer/escrever aqui? REGRAS DE FORMATAÇÃO */
 
 /* Seletor UNIVERSAL
 Alterando o comportamento
@@ -6,7 +6,9 @@ do Box Model CSS. Usando
 esta regra evitamos os problemas
 encontrados ao se usar width, 
 height, padding e border ao mesmo tempo. */
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -29,8 +31,8 @@ body {
     box-shadow: cor distX distY suavização */
     box-shadow:
         red 5px 5px 10px,
-        purple -5px -5px 10px;
-}
+        purple -5px -5px 10px;  
+    }
 
 /* Tornando as imagens flexíveis/responsivas */
 img {
@@ -57,16 +59,16 @@ h1 {
     margin: 0;
     font-family: Impact, Verdana, Arial, sans-serif;
     background-color: rgba(0, 0, 0, 0.5);
-    color:white;
+    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
-    
+
     /* Versão específica para cada: */
     /* border-top-left-radius: 10px;
     border-top-right-radius: 10px; */
-    
+
     /* Versão abreviada: */
     border-radius: 10px 10px 0 0;
 
@@ -76,8 +78,8 @@ h1 {
     font-weight: normal;
 
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; 
-    
+    -webkit-text-stroke-color: black;
+
     /* Propriedades com prefixo
     -webkit-*, -moz-*, -o-*
     
@@ -98,7 +100,9 @@ h2 {
 }
 
 /* Seletor TAG (vale para todos os <a>) */
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
 figure img {
     transform: scale(0.8);
@@ -115,13 +119,20 @@ figure img:hover {
 
 
 /* Seletor AGRUPADO (grupo de seletores) */
-p, li { font-size: 18px; }
+p,
+li {
+    font-size: 18px;
+}
 
 
 /* Seletor CLASSE */
-.centralizar { text-align: center; }
+.centralizar {
+    text-align: center;
+}
 
-.sombra { text-shadow: red 1px 1px 5px; }
+.sombra {
+    text-shadow: red 1px 1px 5px;
+}
 
 .destaque {
     background-color: black;
@@ -143,10 +154,12 @@ p, li { font-size: 18px; }
 Regras para o menu e seus links 
 ****/
 
-nav { text-align: center; }
+nav {
+    text-align: center;
+}
 
 /* Regra para o estado inicial dos links */
-nav a { 
+nav a {
     color: white;
     font-weight: bold;
     background-color: grey;
@@ -158,7 +171,8 @@ nav a {
 
 /* Regra para o estado de acionamento dos
 links */
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
     background-color: black;
 }
 
