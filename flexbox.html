@@ -21,11 +21,21 @@
 #exemplo-flexbox {
 	width: 80%;
 	margin: auto;
-	background-color: lightcyan;
+	background-color: rgb(213, 255, 255);
+	height: 1100px;
 
 	display: flex;
 	/* Habilitando o Flexbox */
-	justify-content: space-between;
+	
+	/* Justify-content: Em direção padrão "row", se comporta como alinhamento horizontal */ 
+
+	/* Se estiver na direção "column", se comporta como alinhamento vertical */
+	justify-content: flex-start;
+
+	/* align-items funciona de forma contrároa. Ou seja, em modo "row" alinha verticalmente. Em modo "column", alinha horizontalmente. */
+	align-items: center;
+	flex-direction: column; 
+	 /* row padrão */
 }
 		
 	</style>
