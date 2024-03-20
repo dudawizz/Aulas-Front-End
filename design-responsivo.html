@@ -32,11 +32,34 @@ hr { border: none;
 h2 { font-size: 20px; }
 
 
+
 /* Etapa 2:
 Regras de uso condicional, ou seja, estilos que vão ser aplicados de acordo com determinadas condições (tamanhos de telas). */
-    
 
+/* Media Queries (Consultas de Mídia) e Breakpoints (pontos de adaptação) */
+@media screen and (min-width: 600px) {
+    body { background-color: sienna; }
+    h1 { text-align: center; }
+}   
 
+/* Exercício!
+1) Faça uma regra condicional para telas com tamanho maior ou igual a 777px em que as seguintes alterações aconteçam: 
+
+- A div exemplo deve ter largura de 75% e ficar no meio
+- Os negritos devem ter outra cor (fundo e/ou texto)
+- Cor de fundo da página deve voltar à cor original */
+
+@media screen and (min-width: 777px)
+    { body { background-color: lightblue; } 
+      b { color: slateblue; }
+      p { font-size: 18px; }
+      
+      .exemplo {
+        margin: auto;
+        width: 75%;
+        margin-top: 5%;
+      }
+}
 
     </style>
 </head>
