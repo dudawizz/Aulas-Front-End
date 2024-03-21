@@ -73,10 +73,15 @@ h1 { background-color: darkred; }
     .conteudo{ display: flex; 
     /* Habilitando a "quebra" da linha (row). Ou seja, se não tiver mais espaço para encaixar lado a lado, acontecerá uma quebra (o elemento vai para a linha de baixo.*/
                flex-wrap: wrap;
+    /* Propriedade nova usada para espaçamentos entre elementos flex. Necessário ajustar largura e/ou altura dos elementos em que haverá espaçamento
+    gap: 10px; */
+
+                justify-content: space-between;
 }
-    .um { width: 70%; }
+    .um { width: 69%; }
     .dois { width: 30%; }
-    .tres { width: 100%; }
+    .tres { width: 100%;
+            margin-top: 1%; }
 }
 
 }
